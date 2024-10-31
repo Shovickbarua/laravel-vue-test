@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Traits\CommonTrait;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+    use CommonTrait;
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return $this->sendResponse(['data' => $categories]);
+
     }
 
     /**
@@ -28,7 +32,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
     }
 
     /**

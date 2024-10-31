@@ -13,7 +13,7 @@ ProductApi.index = async () => {
 };
 
 ProductApi.save = async (data) => {
-    const url = 'api/product/';
+    let url = 'api/product/';
     if (data.id) url = '/api/product/' + data.id + '?_method=PUT';
     const res = await axios.post(url, data)
         .then((response) => {
