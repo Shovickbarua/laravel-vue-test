@@ -20,6 +20,6 @@
         @endif
     </head>
     <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div id='app'><RouterView /></div>
+        <div id='app'><router-view></router-view></div>
     </body>
 </html>
